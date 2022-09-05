@@ -1,0 +1,17 @@
+@value makerBlack,makerWhite,makerGrey from '../../common/colors.css';
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: makerWhite;
+  animation: background 3s linear 1;
+}
+
+@keyframes background {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

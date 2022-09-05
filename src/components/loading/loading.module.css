@@ -1,0 +1,98 @@
+@value makerBlack,makerWhite from '../../common/colors.css';
+
+.load {
+  text-align: center;
+  color: makerWhite;
+  font-size: 4rem;
+  animation: text 2.2s 2 linear alternate;
+  opacity: 0;
+}
+
+p {
+  cursor: pointer;
+  -webkit-text-stroke: 1px #f9f7f1;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(0deg, #f9f7f1, #f9f7f1);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  filter: drop-shadow(0 0 10px #f9f7f1);
+}
+
+p:hover {
+  background-size: 100% 100%;
+  filter: drop-shadow(0 0 10px #f9f7f1);
+}
+
+.left {
+  background-position: 0% 100%;
+  background-size: 100% 100%;
+  animation: left 4.5s linear 1;
+}
+
+.right {
+  background-position: 100% 0%;
+  background-size: 100% 100%;
+  animation: right 4.5s linear 1;
+}
+
+.top {
+  background-position: 100% 0%;
+  background-size: 100% 100%;
+  animation: top 4.5s linear 1;
+}
+
+.bottom {
+  background-position: 100% 0%;
+  background-size: 100% 100%;
+  animation: bottom 4.5s linear 1;
+}
+
+@keyframes text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes left {
+  0% {
+    background-position: 0% 100%;
+    background-size: 0% 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes right {
+  0% {
+    background-position: 100% 0%;
+    background-size: 0% 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes top {
+  0% {
+    background-position: 0% 0%;
+    background-size: 100% 0%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes bottom {
+  0% {
+    background-position: 0% 100%;
+    background-size: 100% 0%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
