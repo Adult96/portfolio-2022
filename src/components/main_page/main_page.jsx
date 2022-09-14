@@ -117,7 +117,7 @@ const MainPage = (props) => {
       <Navbar onPageMove={onPageMove} navColor={navColor} />
       <Dots scrollIndex={scrollIndex} color={color} />
       <Home />
-      <About />
+      <About scrollIndex={scrollIndex} />
       <Skills />
       <Work />
       <Projects />
