@@ -8,10 +8,10 @@ const Loading = ({ onLoad }) => {
   return (
     <div className={styles.load} onAnimationEnd={animationEnd}>
       <div>
-        <p className={styles.left}>SUNGIN</p>
-        <p className={styles.right}>PORTFOLIO</p>
-        <p className={styles.top}>F O R</p>
-        <p className={styles.bottom}>REACT</p>
+        <p className={styles.left}>WELCOME</p>
+        <p className={styles.top}>T O</p>
+        <p className={styles.right}>SEONG-IN</p>
+        <p className={styles.bottom}>PORTFOLIO</p>
       </div>
     </div>
   );

@@ -1,0 +1,30 @@
+.about {
+  position: relative;
+  display: flex;
+
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 10%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.contanier {
+  color: white;
+  border: 1px solid red;
+  width: 50vw;
+  margin-top: 4rem;
+  margin-left: 10vw;
+}
+
+.title {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.info {
+  font-size: 3rem;
+  font-weight: bold;
+}

@@ -1,0 +1,42 @@
+.projects {
+  height: 100vh;
+  background-color: black;
+  margin: 30rem 0;
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transform: rotate(-90deg);
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.one {
+  height: 100vh;
+  background-color: transparent;
+  color: white;
+  font-size: 10rem;
+  transform: rotate(90deg);
+}
+
+.two {
+  height: 100vh;
+  background-color: transparent;
+  color: white;
+  font-size: 10rem;
+  transform: rotate(90deg);
+}
+
+.three {
+  height: 100vh;
+  background-color: transparent;
+  color: white;
+  font-size: 10rem;
+  transform: rotate(90deg);
+}

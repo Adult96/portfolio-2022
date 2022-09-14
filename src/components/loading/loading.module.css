@@ -3,12 +3,17 @@
 .load {
   text-align: center;
   color: makerWhite;
-  font-size: 4rem;
-  animation: text 2.2s 2 linear alternate;
+  font-size: 6rem;
+  /* font-family: 'Black Han Sans', sans-serif; */
+  font-family: 'Bebas Neue', cursive;
+  animation: text 2.25s 2 linear alternate;
   opacity: 0;
 }
 
-p {
+.left,
+.top,
+.right,
+.bottom {
   cursor: pointer;
   -webkit-text-stroke: 1px #f9f7f1;
   -webkit-background-clip: text;
@@ -17,11 +22,7 @@ p {
   background-repeat: no-repeat;
   background-position: 0% 0%;
   filter: drop-shadow(0 0 10px #f9f7f1);
-}
-
-p:hover {
-  background-size: 100% 100%;
-  filter: drop-shadow(0 0 10px #f9f7f1);
+  margin: 0.5rem;
 }
 
 .left {

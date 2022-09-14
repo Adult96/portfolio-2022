@@ -1,0 +1,15 @@
+.dots {
+  position: fixed;
+  top: 50%;
+  left: 2vw;
+  height: 10vh;
+  transform: translateY(-5vh);
+  z-index: 1000;
+  animation: slide 1000ms 1 linear;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-10rem);
+  }
+}

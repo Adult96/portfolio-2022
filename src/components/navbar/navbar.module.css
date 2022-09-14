@@ -1,0 +1,120 @@
+@value makerBlack,makerWhite,markerGrey,makerShadow from '../../common/colors.css';
+
+.navbar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  background-color: rgb(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgb(232, 232, 232);
+  border-radius: 0 0 1rem 1rem;
+  -webkit-backdrop-filter: blur(1rem);
+  backdrop-filter: blur(1rem);
+  z-index: 100;
+  transition: all 100ms ease-in-out;
+  animation: slide 1000ms 1 linear;
+}
+
+.navbar.black {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.navbar.white {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgb(232, 232, 232);
+}
+
+.navbarLogo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 1rem;
+  pointer-events: none;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  pointer-events: none;
+  -webkit-text-stroke: 1px #ffffff;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(0deg, #ffffff, #ffffff);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  filter: drop-shadow(0 0 10px #ffffff);
+  margin-left: 0.5rem;
+  transition: all 100ms ease-in-out;
+}
+
+.title.black {
+  color: makerBlack;
+  -webkit-text-stroke: 1px #000000;
+  background-image: linear-gradient(0deg, #000000, #000000);
+  filter: drop-shadow(0 0 10px #000000);
+}
+
+.title.white {
+  color: makerWhite;
+  -webkit-text-stroke: 1px #ffffff;
+  background-image: linear-gradient(0deg, #ffffff, #ffffff);
+  filter: drop-shadow(0 0 10px #ffffff);
+}
+
+.menuBar {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  transition: all 100ms ease-in-out;
+}
+
+.menuBar.black {
+  display: flex;
+  justify-content: flex-end;
+  color: makerBlack;
+  list-style: none;
+}
+
+.menuBar.white {
+  display: flex;
+  justify-content: flex-end;
+  color: makerWhite;
+  list-style: none;
+}
+
+.home,
+.about,
+.skills,
+.work,
+.project,
+.contact {
+  font-size: 0.7rem;
+  margin-right: 4vw;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 300ms ease;
+}
+
+.home:hover,
+.about:hover,
+.skills:hover,
+.work:hover,
+.project:hover,
+.contact:hover {
+  border-bottom: 1px solid white;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(-10rem);
+  }
+}

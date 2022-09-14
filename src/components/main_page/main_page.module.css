@@ -1,10 +1,21 @@
 @value makerBlack,makerWhite,makerGrey from '../../common/colors.css';
 
 .main {
-  width: 100vw;
+  scroll-behavior: smooth;
   height: 100vh;
-  background-color: makerWhite;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 10px;
+  overflow-y: scroll;
+  background-color: makerBlack;
   animation: background 3s linear 1;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+.main > section {
+  scroll-snap-align: end;
 }
 
 @keyframes background {

@@ -1,14 +1,20 @@
 @value makerBlack,makerWhite,makerGrey from '../../common/colors.css';
 
+.typing {
+  position: absolute;
+  transform: translateX(-1.5rem) translateY(-1rem);
+}
+
 .hintComment {
   color: makerWhite;
+  font-size: 1.2rem;
 }
 
 .blink {
-  color: makerGrey;
+  color: makerWhite;
   animation: blink 0.9s infinite;
   margin-left: 0.1rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .arrow {

@@ -1,1 +1,12 @@
 @value mediaQuery: 62rem;
+@value mediaQuery: 30rem;
+@value mediaQuery: 12rem;
+@vlaue fontLarge: 20rem;
+@vlaue fontMedium: 28px;
+@vlaue fontRegular: 18px;
+@vlaue fontSmall: 16px;
+@vlaue fontMicro: 14px;
+@value weightBold: 700;
+@value weightSemiBold: 600;
+@value weightRegular: 400;
+@value sizeBorderRadius: 4px;
