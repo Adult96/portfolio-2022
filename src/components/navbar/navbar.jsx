@@ -5,7 +5,6 @@ const Navbar = ({ onPageMove, navColor }) => {
   const setColor = navColor === 'black' ? styles.black : styles.white;
   const logoURL =
     navColor === 'black' ? 'img/logo_black.png' : 'img/logo_white.png';
-  console.log(navColor);
   const pageReload = () => {
     window.location.reload();
   };
@@ -36,7 +35,7 @@ const Navbar = ({ onPageMove, navColor }) => {
   return (
     <nav className={`${styles.navbar} ${setColor}`}>
       <div className={styles.navbarLogo} onClick={pageReload}>
-        <img className={styles.logo} src={logoURL} alt='logo' />
+        <img className={styles.logo} src='img/logo_white.png' alt='logo' />
         <p className={`${styles.title} ${setColor}`}>SEONG-IN</p>
       </div>
       <ul className={`${styles.menuBar} ${setColor}`} onClick={pageMove}>

@@ -14,9 +14,9 @@
   display: none;
 }
 
-.main > section {
-  scroll-snap-align: end;
-}
+/* .main > section {
+  scroll-snap-align: start;
+} */
 
 @keyframes background {
   0% {

@@ -52,7 +52,7 @@ const Password = ({ onPassword }) => {
           ref={passwordRef}
           className={styles.input}
           type='text'
-          placeholder='Pass Word...'
+          placeholder='PassWord...'
           onChange={textChange}
         />
       </form>

@@ -43,13 +43,14 @@ const About = ({ scrollIndex }) => {
           걸음 내딛기 시작하였습니다.
         </p>
         <p className={styles.comment}>
-          현재는 Html, CSS, Javascript, react, git 등 프론트엔드를 공부하며
+          현재는 Html, CSS, Javascript, React, Git 등 프론트엔드를 공부하며
           준비된 개발자로 성장하기 위해 노력 중입니다.
         </p>
       </div>
       <div className={styles.contanierImg}>
         <img className={styles.my} src='img/my.png' alt='my' />
       </div>
+      <div className={styles.background}></div>
     </section>
   );
 };

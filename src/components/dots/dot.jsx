@@ -11,11 +11,11 @@ const Dot = ({ scrollIndex, color }) => {
 
   return (
     <div>
-      <div className={`${setcolor} ${one}`}></div>
-      <div className={`${setcolor} ${two}`}></div>
-      <div className={`${setcolor} ${three}`}></div>
-      <div className={`${setcolor} ${four}`}></div>
-      <div className={`${setcolor} ${five}`}></div>
+      <div className={`${styles.white} ${one}`}></div>
+      <div className={`${styles.white} ${two}`}></div>
+      <div className={`${styles.white} ${three}`}></div>
+      <div className={`${styles.white} ${four}`}></div>
+      <div className={`${styles.white} ${five}`}></div>
     </div>
   );
 };

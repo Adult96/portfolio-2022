@@ -4,19 +4,12 @@
   bottom: 15vh;
   display: flex;
   flex-direction: column;
+  color: white;
   z-index: 100;
   font-size: 2.5rem;
   margin-left: 0.5vw;
   transition: all 100ms ease-in-out;
   animation: slide 1000ms 1 linear;
-}
-
-.contact.black {
-  color: black;
-}
-
-.contact.white {
-  color: white;
 }
 
 .instagram,

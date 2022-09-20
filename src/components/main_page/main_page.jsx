@@ -16,7 +16,8 @@ const MainPage = (props) => {
   const [scrollIndex, setScrollIndex] = useState(1);
   const [color, setColor] = useState('white');
   const [navColor, setNavColor] = useState('white');
-
+  const [skillsHeight, setSkillsHeight] = useState(0);
+  // const [scrollSnapAlign, setScrollSnapAlign] = useState(styles.start);
   useEffect(() => {
     const wheelHandler = (e) => {
       const { deltaY } = e;
@@ -27,11 +28,9 @@ const MainPage = (props) => {
         if (scrollTop >= 0 && scrollTop < pageHeight - 100) {
           // console.log('현재 1페이지, down');
           setScrollIndex(1);
-          setColor('white');
-          setNavColor('white');
         } else if (
-          scrollTop + 500 >= pageHeight &&
-          scrollTop < pageHeight * 2 - 100
+          scrollTop + 500 + 480 >= pageHeight &&
+          scrollTop < pageHeight * 2 - 100 + 480
         ) {
           // console.log('현재 2페이지, down');
           setScrollIndex(2);
@@ -39,52 +38,55 @@ const MainPage = (props) => {
           setNavColor('white');
         } else if (
           scrollTop + 500 >= pageHeight * 2 &&
-          scrollTop < pageHeight * 3 - 100
+          scrollTop < pageHeight * 2 + skillsHeight - 100
         ) {
           // console.log('현재 3페이지, down');
           setScrollIndex(3);
           setColor('black');
           setNavColor('black');
         } else if (
-          scrollTop + 500 >= pageHeight * 3 &&
-          scrollTop < pageHeight * 4 - 100
+          scrollTop + 500 >= pageHeight * 2 + skillsHeight &&
+          scrollTop < pageHeight * 3 + skillsHeight - 100
         ) {
           // console.log('현재 4페이지, down');
           setScrollIndex(4);
           setColor('white');
-          setNavColor('black');
         } else {
           // console.log('현재 5페이지, down');
           setScrollIndex(5);
-          setColor('white');
           setNavColor('white');
         }
       } else {
         // 스크롤 올릴 때
-        if (scrollTop >= 0 && scrollTop < pageHeight) {
+        if (scrollTop >= 0 && scrollTop < pageHeight - 400) {
           // console.log('현재 1페이지, up');
           setScrollIndex(1);
-          setColor('white');
-          setNavColor('white');
-        } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
+        } else if (
+          scrollTop >= pageHeight - 400 &&
+          scrollTop < pageHeight * 2 - 400
+        ) {
           // console.log('현재 2페이지, up');
           setScrollIndex(2);
           setColor('white');
           setNavColor('white');
-        } else if (scrollTop >= pageHeight * 2 && scrollTop < pageHeight * 3) {
+        } else if (
+          scrollTop >= pageHeight * 2 - 400 &&
+          scrollTop < pageHeight * 2 + skillsHeight - 400
+        ) {
           // console.log('현재 3페이지, up');
           setScrollIndex(3);
           setColor('black');
           setNavColor('black');
-        } else if (scrollTop >= pageHeight * 3 && scrollTop < pageHeight * 4) {
+        } else if (
+          scrollTop >= pageHeight * 2 + skillsHeight - 400 &&
+          scrollTop < pageHeight * 3 + skillsHeight - 400
+        ) {
           // console.log('현재 4페이지, up');
           setScrollIndex(4);
           setColor('white');
-          setNavColor('black');
         } else {
           // console.log('현재 5페이지, up');
           setScrollIndex(5);
-          setColor('white');
           setNavColor('white');
         }
       }
@@ -94,17 +96,31 @@ const MainPage = (props) => {
     return () => {
       mainRefCurrent.removeEventListener('wheel', wheelHandler);
     };
-  }, [scrollIndex]);
+  }, [scrollIndex, skillsHeight]);
 
   const onPageMove = (pageNum) => {
     const pageHeight = window.innerHeight;
     const setColorIndex = pageNum + 1;
-    mainRef.current.scrollTo({
-      top: pageHeight * pageNum,
-      left: 0,
-      behavior: 'smooth',
-    });
 
+    if (setColorIndex === 4) {
+      mainRef.current.scrollTo({
+        top: pageHeight * 2 + skillsHeight,
+        left: 0,
+        behavior: 'smooth',
+      });
+    } else if (setColorIndex === 5) {
+      mainRef.current.scrollTo({
+        top: pageHeight * 3 + skillsHeight,
+        left: 0,
+        behavior: 'smooth',
+      });
+    } else {
+      mainRef.current.scrollTo({
+        top: pageHeight * pageNum,
+        left: 0,
+        behavior: 'smooth',
+      });
+    }
     setColorIndex === 3 ? setColor('black') : setColor('white');
     setColorIndex === 3 || setColorIndex === 4
       ? setNavColor('black')
@@ -113,12 +129,12 @@ const MainPage = (props) => {
   };
 
   return (
-    <div ref={mainRef} className={styles.main}>
+    <div ref={mainRef} className={`${styles.main}`}>
       <Navbar onPageMove={onPageMove} navColor={navColor} />
       <Dots scrollIndex={scrollIndex} color={color} />
       <Home />
       <About scrollIndex={scrollIndex} />
-      <Skills />
+      <Skills setSkillsHeight={setSkillsHeight} />
       <Work />
       <Projects />
       <Contact color={color} />

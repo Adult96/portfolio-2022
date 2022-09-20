@@ -1,16 +1,19 @@
 .projects {
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   background-color: black;
-  margin: 30rem 0;
 }
 
 .content {
-  width: 100vw;
-  height: 100vh;
-  display: block;
+  width: 100vh;
+  height: 100vw;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
   transform: rotate(-90deg);
+  position: relative;
+  transform-origin: top left;
+  top: 100%;
+  left: 0;
 }
 
 .content::-webkit-scrollbar {
@@ -18,25 +21,49 @@
 }
 
 .one {
+  width: 1000rem;
   height: 100vh;
   background-color: transparent;
   color: white;
   font-size: 10rem;
   transform: rotate(90deg);
+  position: relative;
+  transform-origin: top left;
+  top: 0;
+  left: 100%;
+}
+.first {
+  display: inline-block;
+  position: relative;
+  transform: translateY(-250px);
+  top: 50%;
+  width: 1000px;
+  height: 500px;
+  border: 1px solid white;
 }
 
 .two {
+  width: 100vw;
   height: 100vh;
   background-color: transparent;
   color: white;
   font-size: 10rem;
   transform: rotate(90deg);
+  position: relative;
+  transform-origin: top left;
+  top: 5%;
+  left: 100%;
 }
 
 .three {
+  width: 100vw;
   height: 100vh;
   background-color: transparent;
   color: white;
   font-size: 10rem;
   transform: rotate(90deg);
+  position: relative;
+  transform-origin: top left;
+  top: 10vw;
+  left: 100%;
 }

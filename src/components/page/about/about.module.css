@@ -1,7 +1,7 @@
 .about {
   position: relative;
   display: flex;
-
+  justify-content: center;
   height: 100vh;
   /* background: rgb(255, 255, 255);
   background: linear-gradient(
@@ -10,7 +10,8 @@
     rgba(0, 0, 0, 1) 100%
   ); */
 
-  background-color: #60aff1;
+  background-color: black;
+  margin-bottom: 20rem;
 }
 
 .contanierText {
@@ -22,6 +23,7 @@
   transform: translateY(-3rem);
   transition: all 1000ms ease;
   opacity: 0;
+  z-index: 100;
 }
 
 .contanierText.trans {
@@ -33,6 +35,7 @@
   font-size: 6rem;
   font-weight: bold;
   margin: 3rem 0;
+  font-family: 'Black Han Sans', sans-serif;
 }
 
 .info {
@@ -45,6 +48,7 @@
   font-size: 1.1rem;
   font-weight: bold;
   margin: 2rem 0;
+  max-width: 40rem;
 }
 
 .contanierImg {
@@ -57,9 +61,24 @@
   transform: scale(1.05);
 }
 
+.contanierImg:hover ~ .background {
+  background-color: #60aff1;
+}
+
 .my {
+  position: relative;
   width: 20rem;
   height: 20rem;
   border-radius: 50%;
   transition: all 1000ms ease;
+  z-index: 100;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  transition: all 1s ease-in-out;
 }

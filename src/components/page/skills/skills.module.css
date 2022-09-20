@@ -1,5 +1,458 @@
 .skills {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
+  width: 100vw;
+  /* background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 1) 25%
+  ); */
+  margin-bottom: 20rem;
+}
 
-  background: rgb(255, 255, 255);
+.contanier {
+  display: flex;
+  justify-content: center;
+}
+
+.inner {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-150px);
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-250px);
+  width: 500px;
+  height: 500px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+.high {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-350px);
+  width: 700px;
+  height: 700px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+.outer {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-450px);
+  width: 900px;
+  height: 900px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+.skill {
+  position: absolute;
+  font-size: 4rem;
+  top: 50%;
+  margin: 0;
+  transform: translateY(-37.5px);
+  color: rgb(255, 255, 255);
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+.html {
+  position: absolute;
+  top: calc(50% - 24px);
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  animation: html 30s linear infinite;
+}
+
+.html:hover,
+.html:hover ~ .skill {
+  color: firebrick;
+}
+.css:hover,
+.css:hover ~ .skill {
+  color: dodgerblue;
+}
+.js:hover,
+.js:hover ~ .skill {
+  color: gold;
+}
+.react:hover,
+.react:hover ~ .skill {
+  color: rgb(1, 208, 208);
+  border-color: rgb(1, 208, 208);
+}
+.CssFramework:hover,
+.CssFramework:hover ~ .skill {
+  color: darkorange;
+  border-color: darkorange;
+}
+
+.git:hover,
+.git:hover ~ .skill {
+  color: rgb(255, 68, 0);
+}
+.github:hover,
+.github:hover ~ .skill {
+  color: lightskyblue;
+}
+.yarn:hover,
+.yarn:hover ~ .skill {
+  color: dodgerblue;
+}
+.githubPage:hover,
+.githubPage:hover ~ .skill {
+  color: lightskyblue;
+}
+.netlify:hover {
+  background-color: rgb(92, 249, 244);
+  background: linear-gradient(
+    52deg,
+    rgba(92, 249, 244, 1) 27%,
+    rgba(31, 185, 230, 1) 71%
+  );
+}
+.netlify:hover ~ .skill {
+  color: rgb(92, 249, 244);
+}
+.youtube:hover,
+.youtube:hover ~ .skill {
+  color: red;
+}
+.router:hover,
+.router:hover ~ .skill {
+  color: rgb(255, 115, 0);
+  border-color: rgb(255, 115, 0);
+}
+.cloudinary:hover,
+.cloudinary:hover ~ .skill {
+  color: rgb(1, 64, 198);
+}
+.firebase:hover,
+.firebase:hover ~ .skill {
+  color: rgb(255, 115, 0);
+}
+
+.html,
+.css,
+.js,
+.react,
+.CssFramework,
+.git,
+.github,
+.yarn,
+.githubPage,
+.netlify,
+.youtube,
+.router,
+.cloudinary,
+.firebase,
+.skill {
+  transition: all 300ms ease;
+}
+
+.css {
+  position: absolute;
+  top: calc(50% - 24px);
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  animation: css 30s linear infinite;
+}
+
+.js {
+  position: absolute;
+  top: calc(50% - 24px);
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  animation: js 30s linear infinite;
+}
+
+.react {
+  position: absolute;
+  top: calc(50% - 24px);
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  animation: react 30s linear infinite;
+  background-color: black;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.CssFramework {
+  position: absolute;
+  top: calc(50% - 32px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  margin: auto;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  background-color: black;
+  animation: postcss 15s linear infinite;
+}
+
+.postcssText {
+  font-weight: bold;
+  margin: 0;
+}
+
+.git {
+  position: absolute;
+  top: calc(50% - 24px);
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  animation: git 60s linear infinite;
+}
+
+.github {
+  position: absolute;
+  top: calc(50% - 24px);
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  animation: github 50s linear infinite;
+}
+
+.yarn {
+  position: absolute;
+  top: calc(50% - 24px);
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  animation: yarn 40s linear infinite;
+}
+
+.githubPage {
+  position: absolute;
+  top: calc(50% - 48px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 6rem;
+  height: 6rem;
+  color: rgb(255, 255, 255);
+  animation: githubPage 40s linear infinite;
+}
+
+.githubPageIcon {
+  font-size: 3rem;
+}
+
+.githubPageText {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.netlify {
+  position: absolute;
+  top: calc(50% - 32px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.4rem;
+  color: rgb(255, 255, 255);
+  border: 1px solid white;
+  border-radius: 50%;
+  animation: netlify 40s linear infinite;
+}
+
+.youtube {
+  position: absolute;
+  top: calc(50% - 32px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.4rem;
+  color: rgb(255, 255, 255);
+  animation: youtube 40s linear infinite;
+}
+
+.router {
+  position: absolute;
+  top: calc(50% - 32px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.4rem;
+  color: rgb(255, 255, 255);
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: black;
+  animation: router 40s linear infinite;
+}
+.cloudinary {
+  position: absolute;
+  top: calc(50% - 32px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.4rem;
+  color: rgb(255, 255, 255);
+  animation: cloudinary 40s linear infinite;
+}
+.firebase {
+  position: absolute;
+  top: calc(50% - 32px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.4rem;
+  color: rgb(255, 255, 255);
+  animation: firebase 40s linear infinite;
+}
+
+@keyframes html {
+  0% {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+@keyframes css {
+  0% {
+    transform: rotate(0deg) translateY(150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateY(150px) rotate(-360deg);
+  }
+}
+
+@keyframes js {
+  0% {
+    transform: rotate(0deg) translateY(-150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateY(-150px) rotate(-360deg);
+  }
+}
+
+@keyframes react {
+  0% {
+    transform: rotate(0deg) translateX(-150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(-150px) rotate(-360deg);
+  }
+}
+
+@keyframes postcss {
+  0% {
+    transform: rotate(0deg) translateX(-250px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(-250px) rotate(-360deg);
+  }
+}
+
+@keyframes git {
+  0% {
+    transform: rotate(0deg) translateX(-350px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(-350px) rotate(-360deg);
+  }
+}
+
+@keyframes github {
+  0% {
+    transform: rotate(0deg) translateX(350px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(350px) rotate(-360deg);
+  }
+}
+
+@keyframes yarn {
+  0% {
+    transform: rotate(0deg) translateY(-350px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateY(-350px) rotate(-360deg);
+  }
+}
+
+@keyframes githubPage {
+  0% {
+    transform: rotate(0deg) translateY(-450px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateY(-450px) rotate(-360deg);
+  }
+}
+
+@keyframes netlify {
+  0% {
+    transform: rotate(0deg) translateY(450px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateY(450px) rotate(-360deg);
+  }
+}
+
+@keyframes youtube {
+  0% {
+    transform: rotate(0deg) translateX(-450px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(-450px) rotate(-360deg);
+  }
+}
+
+@keyframes router {
+  0% {
+    transform: rotate(0deg) translateX(450px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(450px) rotate(-360deg);
+  }
+}
+
+@keyframes cloudinary {
+  0% {
+    transform: rotate(0deg) translateY(320px) translateX(-320px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateY(320px) translateX(-320px)
+      rotate(-360deg);
+  }
+}
+
+@keyframes firebase {
+  0% {
+    transform: rotate(0deg) translateY(-320px) translateX(320px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateY(-320px) translateX(320px)
+      rotate(-360deg);
+  }
 }
