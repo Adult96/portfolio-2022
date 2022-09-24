@@ -18,10 +18,10 @@
   animation: slide 1000ms 1 linear;
 }
 
-/* .navbar.black {
-  background-color: rgba(248, 248, 248, 0.1);
-  border-bottom: 1px solid rgb(255, 255, 255);
-} */
+.navbar.black {
+  background-color: rgba(121, 121, 121, 0.1);
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
 
 .navbar.white {
   background-color: rgba(255, 255, 255, 0.1);
@@ -60,12 +60,12 @@
   transition: all 100ms ease-in-out;
 }
 
-/* .title.black {
+.title.black {
   color: makerBlack;
-  -webkit-text-stroke: 1px #919191;
-  background-image: linear-gradient(0deg, #919191, #919191);
-  filter: drop-shadow(0 0 10px #919191);
-} */
+  -webkit-text-stroke: 1px #000000;
+  background-image: linear-gradient(0deg, #000000, #000000);
+  filter: drop-shadow(0 0 10px #000000);
+}
 
 .title.white {
   color: makerWhite;
@@ -79,15 +79,16 @@
   color: makerWhite;
   justify-content: flex-end;
   list-style: none;
+  padding: 0;
   transition: all 100ms ease-in-out;
 }
 
-/* .menuBar.black {
+.menuBar.black {
   display: flex;
   justify-content: flex-end;
-  color: #919191;
+  color: #000000;
   list-style: none;
-} */
+}
 
 .menuBar.white {
   display: flex;
@@ -99,27 +100,78 @@
 .home,
 .about,
 .skills,
-.work,
+.animation,
 .project,
 .contact {
   font-size: 0.7rem;
   margin-right: 4vw;
   cursor: pointer;
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
   transition: border-bottom 300ms ease;
 }
 
 .home:hover,
 .about:hover,
 .skills:hover,
-.work:hover,
+.animation:hover,
 .project:hover,
 .contact:hover {
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid gray;
+}
+
+.home.homeDot {
+  border-bottom: 2px solid black;
+}
+
+.about.aboutDot {
+  border-bottom: 2px solid white;
+}
+
+.skills.skillsDot {
+  border-bottom: 2px solid white;
+}
+
+.animation.animationDot {
+  border-bottom: 2px solid white;
+}
+
+.project.projectDot {
+  border-bottom: 2px solid black;
 }
 
 @keyframes slide {
   0% {
     transform: translateY(-10rem);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbarLogo {
+    display: none;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .menuBar {
+    width: 100%;
+    margin: auto;
+  }
+
+  .home,
+  .about,
+  .skills,
+  .animation,
+  .project,
+  .contact {
+    margin: auto;
+    font-size: 0.5rem;
   }
 }

@@ -1,10 +1,9 @@
 .contact {
   position: fixed;
   left: 0;
-  bottom: 15vh;
+  bottom: 1rem;
   display: flex;
   flex-direction: column;
-  color: white;
   z-index: 100;
   font-size: 2.5rem;
   margin-left: 0.5vw;
@@ -12,16 +11,67 @@
   animation: slide 1000ms 1 linear;
 }
 
+.contact.black {
+  color: black;
+}
+
+.contact.white {
+  color: white;
+}
+
 .instagram,
 .github,
 .email {
   margin-bottom: 1rem;
-  mix-blend-mode: difference;
   cursor: pointer;
+}
+
+.instagram.black,
+.github.black,
+.email.black {
+  color: black;
+}
+
+.instagram.white,
+.github.white,
+.email.white {
+  color: white;
+}
+
+.email {
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.copyText {
+  position: absolute;
+  bottom: -100rem;
 }
 
 @keyframes slide {
   0% {
     transform: translateX(-10rem);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact {
+    font-size: 1.8rem;
+  }
+
+  .button {
+    width: 1.8rem;
+    height: 1.8rem;
+    border: none;
+    padding: 0;
+    background-color: transparent;
   }
 }

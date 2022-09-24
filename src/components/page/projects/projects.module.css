@@ -1,14 +1,14 @@
 .projects {
-  height: 100%;
-  width: 100%;
-  background-color: black;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #e7e5e4;
 }
 
 .content {
   width: 100vh;
   height: 100vw;
   overflow-x: hidden;
-  overflow-y: hidden;
   transform: rotate(-90deg);
   position: relative;
   transform-origin: top left;
@@ -16,54 +16,78 @@
   left: 0;
 }
 
+.content.scroll {
+  overflow-y: scroll;
+}
+
+.content.hidden {
+  overflow-y: hidden;
+}
+
 .content::-webkit-scrollbar {
   display: none;
 }
 
-.one {
-  width: 1000rem;
+.container {
+  display: flex;
+  width: 100%;
   height: 100vh;
   background-color: transparent;
-  color: white;
-  font-size: 10rem;
+  color: black;
   transform: rotate(90deg);
   position: relative;
   transform-origin: top left;
-  top: 0;
-  left: 100%;
-}
-.first {
-  display: inline-block;
-  position: relative;
-  transform: translateY(-250px);
-  top: 50%;
-  width: 1000px;
-  height: 500px;
-  border: 1px solid white;
-}
-
-.two {
-  width: 100vw;
-  height: 100vh;
-  background-color: transparent;
-  color: white;
-  font-size: 10rem;
-  transform: rotate(90deg);
-  position: relative;
-  transform-origin: top left;
-  top: 5%;
+  top: 0px;
   left: 100%;
 }
 
-.three {
-  width: 100vw;
-  height: 100vh;
-  background-color: transparent;
-  color: white;
-  font-size: 10rem;
-  transform: rotate(90deg);
-  position: relative;
-  transform-origin: top left;
-  top: 10vw;
-  left: 100%;
+.title {
+  font-size: 5rem;
+  font-family: 'Black Han Sans', sans-serif;
+  margin: 0;
+  margin-top: 4rem;
+  margin-left: 4rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.textStart {
+  margin: auto 0;
+  margin-left: 20rem;
+  width: 10rem;
+  height: 5rem;
+  font-size: 4rem;
+  color: transparent;
+  -webkit-text-stroke: 2px #000000;
+  -webkit-background-clip: text;
+  transform: rotate(-90deg);
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+.textEnd {
+  margin: auto 0;
+  width: 10rem;
+  height: 5rem;
+  font-size: 4rem;
+  color: transparent;
+  -webkit-text-stroke: 2px #000000;
+  -webkit-background-clip: text;
+  transform: rotate(-90deg);
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 3rem;
+    margin-left: 1rem;
+  }
+
+  .textStart {
+    margin-left: 0rem;
+    font-size: 3rem;
+  }
+
+  .textEnd {
+    font-size: 3rem;
+  }
 }

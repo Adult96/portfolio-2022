@@ -1,5 +1,6 @@
 .skills {
-  position: relative;
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,7 +12,7 @@
     rgba(255, 255, 255, 1) 0%,
     rgba(0, 0, 0, 1) 25%
   ); */
-  margin-bottom: 20rem;
+  background-color: black;
 }
 
 .contanier {
@@ -69,17 +70,15 @@
   font-family: 'Black Han Sans', sans-serif;
 }
 
-.html {
-  position: absolute;
-  top: calc(50% - 24px);
-  font-size: 3rem;
-  color: rgb(255, 255, 255);
-  animation: html 30s linear infinite;
-}
-
 .html:hover,
 .html:hover ~ .skill {
   color: firebrick;
+}
+.html:hover ~ .inner,
+.html:hover ~ .middle,
+.html:hover ~ .high,
+.html:hover ~ .outer {
+  border-color: firebrick;
 }
 .css:hover,
 .css:hover ~ .skill {
@@ -163,6 +162,14 @@
   transition: all 300ms ease;
 }
 
+.html {
+  position: absolute;
+  top: calc(50% - 24px);
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  animation: html 30s linear infinite;
+}
+
 .css {
   position: absolute;
   top: calc(50% - 24px);
@@ -242,6 +249,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   width: 6rem;
   height: 6rem;
   color: rgb(255, 255, 255);
@@ -274,15 +282,20 @@
 
 .youtube {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: calc(50% - 32px);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 4rem;
-  height: 4rem;
+  width: 6rem;
+  height: 6rem;
   font-size: 1.4rem;
   color: rgb(255, 255, 255);
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: black;
   animation: youtube 40s linear infinite;
 }
 
@@ -304,28 +317,38 @@
 }
 .cloudinary {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: calc(50% - 32px);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 4rem;
-  height: 4rem;
+  width: 7rem;
+  height: 7rem;
   font-size: 1.4rem;
   color: rgb(255, 255, 255);
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: black;
   animation: cloudinary 40s linear infinite;
 }
 .firebase {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: calc(50% - 32px);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 4rem;
-  height: 4rem;
+  width: 6rem;
+  height: 6rem;
   font-size: 1.4rem;
   color: rgb(255, 255, 255);
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: black;
   animation: firebase 40s linear infinite;
 }
 
@@ -454,5 +477,749 @@
   100% {
     transform: rotate(360deg) translateY(-320px) translateX(320px)
       rotate(-360deg);
+  }
+}
+
+/* media qurey */
+@media screen and (max-width: 1024px) {
+  .skill {
+    font-size: 2rem;
+    transform: translateY(-20px);
+  }
+
+  .inner {
+    transform: translateY(-75px);
+    width: 150px;
+    height: 150px;
+  }
+
+  .middle {
+    transform: translateY(-175px);
+    width: 350px;
+    height: 350px;
+  }
+
+  .high {
+    transform: translateY(-275px);
+    width: 550px;
+    height: 550px;
+  }
+
+  .outer {
+    transform: translateY(-375px);
+    width: 750px;
+    height: 750px;
+  }
+
+  .html {
+    top: calc(50% - 16px);
+    font-size: 2rem;
+  }
+
+  .css {
+    top: calc(50% - 16px);
+    font-size: 2rem;
+  }
+
+  .js {
+    top: calc(50% - 16px);
+    font-size: 2rem;
+  }
+
+  .react {
+    top: calc(50% - 16px);
+    font-size: 2rem;
+  }
+
+  .CssFramework {
+    top: calc(50% - 32px);
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .git {
+    top: calc(50% - 24px);
+    font-size: 3rem;
+  }
+
+  .github {
+    top: calc(50% - 24px);
+    font-size: 3rem;
+  }
+
+  .yarn {
+    top: calc(50% - 24px);
+    font-size: 3rem;
+  }
+
+  .githubPage {
+    top: calc(50% - 48px);
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .githubPageIcon {
+    font-size: 3rem;
+  }
+
+  .githubPageText {
+    font-size: 1rem;
+  }
+
+  .netlify {
+    top: calc(50% - 32px);
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.4rem;
+  }
+
+  .youtube {
+    top: calc(50% - 32px);
+    width: 5rem;
+    height: 5rem;
+    font-size: 1.2rem;
+  }
+
+  .router {
+    top: calc(50% - 32px);
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.4rem;
+  }
+  .cloudinary {
+    top: calc(50% - 32px);
+    width: 6rem;
+    height: 6rem;
+    font-size: 1.2rem;
+  }
+  .firebase {
+    top: calc(50% - 32px);
+    width: 5rem;
+    height: 5rem;
+    font-size: 1.2rem;
+  }
+
+  @keyframes html {
+    0% {
+      transform: rotate(0deg) translateX(75px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(75px) rotate(-360deg);
+    }
+  }
+
+  @keyframes css {
+    0% {
+      transform: rotate(0deg) translateY(75px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(75px) rotate(-360deg);
+    }
+  }
+
+  @keyframes js {
+    0% {
+      transform: rotate(0deg) translateY(-75px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(-75px) rotate(-360deg);
+    }
+  }
+
+  @keyframes react {
+    0% {
+      transform: rotate(0deg) translateX(-75px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(-75px) rotate(-360deg);
+    }
+  }
+
+  @keyframes postcss {
+    0% {
+      transform: rotate(0deg) translateX(-175px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(-175px) rotate(-360deg);
+    }
+  }
+
+  @keyframes git {
+    0% {
+      transform: rotate(0deg) translateX(-275px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(-275px) rotate(-360deg);
+    }
+  }
+
+  @keyframes github {
+    0% {
+      transform: rotate(0deg) translateX(275px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(275px) rotate(-360deg);
+    }
+  }
+
+  @keyframes yarn {
+    0% {
+      transform: rotate(0deg) translateY(-275px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(-275px) rotate(-360deg);
+    }
+  }
+
+  @keyframes githubPage {
+    0% {
+      transform: rotate(0deg) translateY(-375px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(-375px) rotate(-360deg);
+    }
+  }
+
+  @keyframes netlify {
+    0% {
+      transform: rotate(0deg) translateY(375px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(375px) rotate(-360deg);
+    }
+  }
+
+  @keyframes youtube {
+    0% {
+      transform: rotate(0deg) translateX(-375px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(-375px) rotate(-360deg);
+    }
+  }
+
+  @keyframes router {
+    0% {
+      transform: rotate(0deg) translateX(375px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(375px) rotate(-360deg);
+    }
+  }
+
+  @keyframes cloudinary {
+    0% {
+      transform: rotate(0deg) translateY(265px) translateX(-265px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(265px) translateX(-265px)
+        rotate(-360deg);
+    }
+  }
+
+  @keyframes firebase {
+    0% {
+      transform: rotate(0deg) translateY(-265px) translateX(265px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(-265px) translateX(265px)
+        rotate(-360deg);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skill {
+    font-size: 1.5rem;
+    transform: translateY(-15px);
+  }
+
+  .inner {
+    transform: translateY(-75px);
+    width: 150px;
+    height: 150px;
+  }
+
+  .middle {
+    transform: translateY(-150px);
+    width: 300px;
+    height: 300px;
+  }
+
+  .high {
+    transform: translateY(-225px);
+    width: 450px;
+    height: 450px;
+  }
+
+  .outer {
+    transform: translateY(-300px);
+    width: 600px;
+    height: 600px;
+  }
+
+  .html {
+    top: calc(50% - 16px);
+    font-size: 2rem;
+  }
+
+  .css {
+    top: calc(50% - 16px);
+    font-size: 2rem;
+  }
+
+  .js {
+    top: calc(50% - 16px);
+    font-size: 2rem;
+  }
+
+  .react {
+    top: calc(50% - 16px);
+    font-size: 2rem;
+  }
+
+  .CssFramework {
+    top: calc(50% - 32px);
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .git {
+    top: calc(50% - 24px);
+    font-size: 3rem;
+  }
+
+  .github {
+    top: calc(50% - 24px);
+    font-size: 3rem;
+  }
+
+  .yarn {
+    top: calc(50% - 24px);
+    font-size: 3rem;
+  }
+
+  .githubPage {
+    top: calc(50% - 48px);
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .githubPageIcon {
+    font-size: 2rem;
+  }
+
+  .githubPageText {
+    font-size: 0.8rem;
+  }
+
+  .netlify {
+    top: calc(50% - 24px);
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+
+  .youtube {
+    top: calc(50% - 24px);
+    width: 4rem;
+    height: 4rem;
+    font-size: 1rem;
+  }
+
+  .router {
+    top: calc(50% - 24px);
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+  .cloudinary {
+    top: calc(50% - 32px);
+    width: 5rem;
+    height: 5rem;
+    font-size: 1rem;
+  }
+  .firebase {
+    top: calc(50% - 32px);
+    width: 4rem;
+    height: 4rem;
+    font-size: 1rem;
+  }
+
+  @keyframes html {
+    0% {
+      transform: rotate(0deg) translateX(75px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(75px) rotate(-360deg);
+    }
+  }
+
+  @keyframes css {
+    0% {
+      transform: rotate(0deg) translateY(75px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(75px) rotate(-360deg);
+    }
+  }
+
+  @keyframes js {
+    0% {
+      transform: rotate(0deg) translateY(-75px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(-75px) rotate(-360deg);
+    }
+  }
+
+  @keyframes react {
+    0% {
+      transform: rotate(0deg) translateX(-75px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(-75px) rotate(-360deg);
+    }
+  }
+
+  @keyframes postcss {
+    0% {
+      transform: rotate(0deg) translateX(-150px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(-150px) rotate(-360deg);
+    }
+  }
+
+  @keyframes git {
+    0% {
+      transform: rotate(0deg) translateX(-225px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(-225px) rotate(-360deg);
+    }
+  }
+
+  @keyframes github {
+    0% {
+      transform: rotate(0deg) translateX(225px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(225px) rotate(-360deg);
+    }
+  }
+
+  @keyframes yarn {
+    0% {
+      transform: rotate(0deg) translateY(-225px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(-225px) rotate(-360deg);
+    }
+  }
+
+  @keyframes githubPage {
+    0% {
+      transform: rotate(0deg) translateY(-300px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(-300px) rotate(-360deg);
+    }
+  }
+
+  @keyframes netlify {
+    0% {
+      transform: rotate(0deg) translateY(300px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(300px) rotate(-360deg);
+    }
+  }
+
+  @keyframes youtube {
+    0% {
+      transform: rotate(0deg) translateX(-300px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(-300px) rotate(-360deg);
+    }
+  }
+
+  @keyframes router {
+    0% {
+      transform: rotate(0deg) translateX(300px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(300px) rotate(-360deg);
+    }
+  }
+
+  @keyframes cloudinary {
+    0% {
+      transform: rotate(0deg) translateY(210px) translateX(-210px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(210px) translateX(-210px)
+        rotate(-360deg);
+    }
+  }
+
+  @keyframes firebase {
+    0% {
+      transform: rotate(0deg) translateY(-210px) translateX(210px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(-210px) translateX(210px)
+        rotate(-360deg);
+    }
+  }
+}
+
+@media screen and (max-width: 480px),
+  (max-height: 768px) and (orientation: landscape) {
+  .skill {
+    font-size: 1rem;
+    transform: translateY(-10px);
+  }
+
+  .inner {
+    transform: translateY(-50px);
+    width: 100px;
+    height: 100px;
+  }
+
+  .middle {
+    transform: translateY(-100px);
+    width: 200px;
+    height: 200px;
+  }
+
+  .high {
+    transform: translateY(-150px);
+    width: 300px;
+    height: 300px;
+  }
+
+  .outer {
+    transform: translateY(-200px);
+    width: 400px;
+    height: 400px;
+  }
+
+  .html {
+    top: calc(50% - 16px);
+    font-size: 2rem;
+  }
+
+  .css {
+    top: calc(50% - 16px);
+    font-size: 2rem;
+  }
+
+  .js {
+    top: calc(50% - 16px);
+    font-size: 2rem;
+  }
+
+  .react {
+    top: calc(50% - 16px);
+    font-size: 2rem;
+  }
+
+  .CssFramework {
+    top: calc(50% - 32px);
+    width: 3rem;
+    height: 3rem;
+    font-size: 0.5rem;
+  }
+
+  .git {
+    top: calc(50% - 16px);
+    font-size: 2rem;
+  }
+
+  .github {
+    top: calc(50% - 16px);
+    font-size: 2rem;
+  }
+
+  .yarn {
+    top: calc(50% - 16px);
+    font-size: 2rem;
+  }
+
+  .githubPage {
+    top: calc(50% - 24px);
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .githubPageIcon {
+    font-size: 2rem;
+  }
+
+  .githubPageText {
+    font-size: 0.5rem;
+  }
+
+  .netlify {
+    top: calc(50% - 24px);
+    width: 3rem;
+    height: 3rem;
+    font-size: 0.5rem;
+  }
+
+  .youtube {
+    top: calc(50% - 24px);
+    width: 3rem;
+    height: 3rem;
+    font-size: 0.5rem;
+  }
+
+  .router {
+    top: calc(50% - 24px);
+    width: 3rem;
+    height: 3rem;
+    font-size: 0.5rem;
+  }
+  .cloudinary {
+    top: calc(50% - 24px);
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 0.5rem;
+  }
+  .firebase {
+    top: calc(50% - 24px);
+    width: 3rem;
+    height: 3rem;
+    font-size: 0.5rem;
+  }
+
+  @keyframes html {
+    0% {
+      transform: rotate(0deg) translateX(50px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(50px) rotate(-360deg);
+    }
+  }
+
+  @keyframes css {
+    0% {
+      transform: rotate(0deg) translateY(50px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(50px) rotate(-360deg);
+    }
+  }
+
+  @keyframes js {
+    0% {
+      transform: rotate(0deg) translateY(-50px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(-50px) rotate(-360deg);
+    }
+  }
+
+  @keyframes react {
+    0% {
+      transform: rotate(0deg) translateX(-50px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(-50px) rotate(-360deg);
+    }
+  }
+
+  @keyframes postcss {
+    0% {
+      transform: rotate(0deg) translateX(-100px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(-100px) rotate(-360deg);
+    }
+  }
+
+  @keyframes git {
+    0% {
+      transform: rotate(0deg) translateX(-150px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(-150px) rotate(-360deg);
+    }
+  }
+
+  @keyframes github {
+    0% {
+      transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+  }
+
+  @keyframes yarn {
+    0% {
+      transform: rotate(0deg) translateY(-150px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(-150px) rotate(-360deg);
+    }
+  }
+
+  @keyframes githubPage {
+    0% {
+      transform: rotate(0deg) translateY(-200px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(-200px) rotate(-360deg);
+    }
+  }
+
+  @keyframes netlify {
+    0% {
+      transform: rotate(0deg) translateY(200px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(200px) rotate(-360deg);
+    }
+  }
+
+  @keyframes youtube {
+    0% {
+      transform: rotate(0deg) translateX(-200px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(-200px) rotate(-360deg);
+    }
+  }
+
+  @keyframes router {
+    0% {
+      transform: rotate(0deg) translateX(200px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(200px) rotate(-360deg);
+    }
+  }
+
+  @keyframes cloudinary {
+    0% {
+      transform: rotate(0deg) translateY(140px) translateX(-140px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(140px) translateX(-140px)
+        rotate(-360deg);
+    }
+  }
+
+  @keyframes firebase {
+    0% {
+      transform: rotate(0deg) translateY(-140px) translateX(140px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(-140px) translateX(140px)
+        rotate(-360deg);
+    }
   }
 }

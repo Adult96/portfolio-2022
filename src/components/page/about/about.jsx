@@ -49,6 +49,9 @@ const About = ({ scrollIndex }) => {
       </div>
       <div className={styles.contanierImg}>
         <img className={styles.my} src='img/my.png' alt='my' />
+        <div className={styles.hover}>
+          Hover <p className={styles.bang}>!</p>
+        </div>
       </div>
       <div className={styles.background}></div>
     </section>

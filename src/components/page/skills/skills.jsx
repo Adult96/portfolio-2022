@@ -15,19 +15,11 @@ import {
   faYarn,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
-import { useRef } from 'react';
-import { useEffect } from 'react';
 
-const Skills = ({ setSkillsHeight }) => {
-  const skiilsRef = useRef();
-
-  useEffect(() => {
-    setSkillsHeight(skiilsRef.current.clientHeight);
-  }, [setSkillsHeight]);
+const Skills = () => {
   return (
-    <section ref={skiilsRef} className={styles.skills}>
+    <section className={styles.skills}>
       <div className={styles.contanier}>
-        {/* <p className={styles.skill}>SKILLS</p> */}
         <div className={styles.inner}></div>
         <div className={styles.middle}></div>
         <div className={styles.high}></div>
@@ -61,46 +53,6 @@ const Skills = ({ setSkillsHeight }) => {
           firebase
         </div>
         <p className={styles.skill}>SKILLS</p>
-        {/* <img className={styles.netlify} src='img/netlify.png' alt='netlify' /> */}
-        {/* <div className={styles.Tool}>
-            <p className={styles.title}>Tool</p>
-            <FontAwesomeIcon className={styles.git} icon={faGit} />
-            <FontAwesomeIcon className={styles.github} icon={faGithub} />
-            <FontAwesomeIcon className={styles.yarn} icon={faYarn} />
-          </div>
-          <div className={styles.Publish}>
-            <p className={styles.title}>Publish</p>
-            <FontAwesomeIcon className={styles.githubPage} icon={faGithub} />
-            <p className={styles.icon}>Github Pages</p>
-            <img
-              className={styles.netlify}
-              src='img/netlify.png'
-              alt='netlify'
-            />
-          </div>
-          <div className={styles.api}>
-            <p className={styles.title}>API</p>
-            <p className={styles.youtube}>Youtube API</p>
-            <p className={styles.web}>Web API</p>
-          </div>
-          <div className={styles.library}>
-            <p className={styles.title}>Library</p>
-            <img className={styles.router} src='img/router.png' alt='router' />
-            <img
-              className={styles.cloudinary}
-              src='img/cloudinary.png'
-              alt='cloudinary'
-            />
-          </div>
-          <div className={styles.Backend}>
-            <p className={styles.title}>Backend</p>
-            <img
-              className={styles.firebase}
-              src='img/Firebase.png'
-              alt='Firebase'
-            />
-          </div>
-        </div> */}
       </div>
     </section>
   );
