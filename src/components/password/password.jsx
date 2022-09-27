@@ -42,7 +42,7 @@ const Password = ({ onPassword }) => {
         {hintClick ? (
           <Typing />
         ) : (
-          <button className={`${styles.hintBtn}`} onClick={onHintBtnClick}>
+          <button className={styles.hintBtn} onClick={onHintBtnClick}>
             Hint
           </button>
         )}

@@ -23,6 +23,7 @@ const Animation = ({ SetWorkHeight }) => {
             autoPlay
             loop
             muted
+            playsInline
           ></video>
           <div className={styles.infoCard}>
             CSS translate3d 를 이용한 <br /> 3D Card 효과 입니다.
@@ -35,6 +36,7 @@ const Animation = ({ SetWorkHeight }) => {
             autoPlay
             loop
             muted
+            playsInline
           ></video>
           <div className={styles.infoClick}>
             클릭 위치에 따라 Effect의 <br /> 위치가 달라지는 효과 입니다.
@@ -47,6 +49,7 @@ const Animation = ({ SetWorkHeight }) => {
             autoPlay
             loop
             muted
+            playsInline
           ></video>
           <div className={styles.infoMouse}>
             글자의 방향에 따라 달라지는 <br /> Light효과 입니다.

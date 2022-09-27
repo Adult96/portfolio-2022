@@ -42,11 +42,44 @@
   margin: 0;
 }
 
+.contents {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .comment {
   font-size: 1.2rem;
-  font-weight: bold;
   margin: 1rem 0;
   max-width: 40rem;
+  font-family: 'Do Hyeon', sans-serif;
+  transition: all 1s ease-in-out;
+}
+
+.comment.show {
+  opacity: 0;
+}
+
+.comment.hide {
+  opacity: 1;
+}
+
+.history {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  font-size: 1.2rem;
+  font-family: 'Do Hyeon', sans-serif;
+  transition: all 1s ease-in-out;
+}
+
+.history.show {
+  opacity: 1;
+}
+
+.history.hide {
+  opacity: 0;
 }
 
 .contanierImg {
@@ -122,6 +155,16 @@
   }
   100% {
     transform: scale(1.2);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .title {
+    font-size: 11rem;
+  }
+
+  .info {
+    font-size: 5rem;
   }
 }
 
