@@ -1,3 +1,7 @@
+.pointerDel {
+  pointer-events: none;
+}
+
 .skills {
   position: sticky;
   top: 0;
@@ -12,7 +16,9 @@
     rgba(255, 255, 255, 1) 0%,
     rgba(0, 0, 0, 1) 25%
   ); */
-  background-color: black;
+  /* background-color: black;
+   */
+  background-color: #239f9b;
 }
 
 .contanier {
@@ -28,6 +34,7 @@
   height: 300px;
   border: 1px solid rgb(255, 255, 255);
   border-radius: 50%;
+  animation: innerClick 5s linear infinite alternate;
 }
 
 .middle {
@@ -160,6 +167,7 @@
 .firebase,
 .skill {
   transition: all 300ms ease;
+  cursor: pointer;
 }
 
 .html {
@@ -192,9 +200,6 @@
   font-size: 3rem;
   color: rgb(255, 255, 255);
   animation: react 30s linear infinite;
-  background-color: black;
-  border-radius: 50%;
-  border: 1px solid white;
 }
 
 .CssFramework {
@@ -210,7 +215,8 @@
   color: rgb(255, 255, 255);
   border: 1px solid rgb(255, 255, 255);
   border-radius: 50%;
-  background-color: black;
+  background-color: #1a7e7b;
+
   animation: postcss 15s linear infinite;
 }
 
@@ -277,6 +283,8 @@
   color: rgb(255, 255, 255);
   border: 1px solid white;
   border-radius: 50%;
+  background-color: #1a7e7b;
+
   animation: netlify 40s linear infinite;
 }
 
@@ -295,7 +303,8 @@
   color: rgb(255, 255, 255);
   border: 1px solid white;
   border-radius: 50%;
-  background-color: black;
+  background-color: #1a7e7b;
+
   animation: youtube 40s linear infinite;
 }
 
@@ -312,7 +321,8 @@
   color: rgb(255, 255, 255);
   border: 1px solid white;
   border-radius: 50%;
-  background-color: black;
+  background-color: #1a7e7b;
+
   animation: router 40s linear infinite;
 }
 .cloudinary {
@@ -330,7 +340,8 @@
   color: rgb(255, 255, 255);
   border: 1px solid white;
   border-radius: 50%;
-  background-color: black;
+  background-color: #1a7e7b;
+
   animation: cloudinary 40s linear infinite;
 }
 .firebase {
@@ -348,7 +359,7 @@
   color: rgb(255, 255, 255);
   border: 1px solid white;
   border-radius: 50%;
-  background-color: black;
+  background-color: #1a7e7b;
   animation: firebase 40s linear infinite;
 }
 

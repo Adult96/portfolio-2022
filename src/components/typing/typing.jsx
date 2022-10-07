@@ -2,6 +2,8 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import styles from './typing.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 const Typing = () => {
   const [Text, setText] = useState('');
@@ -28,7 +30,8 @@ const Typing = () => {
         <span className={styles.hintComment}>{`"${Text}"`}</span>
         <span className={styles.blink}>|</span>
       </div>
-      <img className={styles.arrow} src='img/arrow.png' alt='arrow' />
+      {/* <img className={styles.arrow} src='img/arrow.png' alt='arrow' /> */}
+      <FontAwesomeIcon className={styles.arrow} icon={faArrowDown} />
     </div>
   );
 };

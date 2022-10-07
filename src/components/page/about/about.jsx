@@ -56,7 +56,7 @@ const About = ({ scrollIndex }) => {
           </p>
           <div className={`${styles.history} ${showAndHide}`}>
             <p>- WRO(World Robot Olympiad) 한국 경진대회 금상 </p>
-            <p>- WRO(World Robot Olympiad) 헝가리 본선 7등 </p>
+            <p>- WRO(World Robot Olympiad) 헝가리 본선 진출 </p>
             <p>- 인하공업전문대학교 메카트로닉스 졸업 </p>
             <p>- FA 프로그래머 2년차 퇴사 </p>
             <p>- 메카트로닉스 학사 취득</p>

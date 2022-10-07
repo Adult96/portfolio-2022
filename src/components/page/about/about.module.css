@@ -125,7 +125,9 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: cadetblue;
+  background-color: #26aeaa;
+
+  /* background-color: cadetblue; */
   transition: all 1s ease-in-out;
 }
 

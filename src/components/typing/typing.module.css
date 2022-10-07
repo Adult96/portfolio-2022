@@ -2,7 +2,7 @@
 
 .typing {
   position: absolute;
-  transform: translateX(-1.5rem) translateY(-1rem);
+  transform: translateX(-2.5rem) translateY(-3rem);
 }
 
 .hintComment {
@@ -18,8 +18,10 @@
 }
 
 .arrow {
-  width: 5rem;
-  height: 5rem;
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 0.4rem;
 }
 
 @keyframes blink {

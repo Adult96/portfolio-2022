@@ -9,12 +9,11 @@ import Animation from '../page/animation/animation';
 import styles from './main_page.module.css';
 import { useRef } from 'react';
 import { useState } from 'react';
-import Dots from '../dots/dots';
 
 const MainPage = (props) => {
   const mainRef = useRef();
   const [scrollIndex, setScrollIndex] = useState(1);
-  const [color, setColor] = useState('black');
+  const [color, setColor] = useState('white');
   const [workHeight, SetWorkHeight] = useState(0);
 
   useEffect(() => {
@@ -25,65 +24,46 @@ const MainPage = (props) => {
       if (deltaY > 0) {
         // 스크롤 내릴 때
         if (scrollTop >= 0 && scrollTop < pageHeight) {
-          // console.log('현재 1페이지, down');
           setScrollIndex(1);
-          setColor('black');
         } else if (
           scrollTop >= pageHeight &&
           scrollTop < pageHeight * 2 + 480
         ) {
-          // console.log('현재 2페이지, down');
           setScrollIndex(2);
-          setColor('white');
         } else if (
           scrollTop >= pageHeight * 2 &&
           scrollTop < pageHeight * 3 + 480 * 2
         ) {
-          // console.log('현재 3페이지, down');
           setScrollIndex(3);
         } else if (
           scrollTop >= pageHeight * 3 &&
           scrollTop < pageHeight * 3 + 480 * 4 + workHeight
         ) {
-          // console.log('현재 4페이지, down');
-
           setScrollIndex(4);
-          setColor('white');
         } else {
-          // console.log('현재 5페이지, down');
           setScrollIndex(5);
-          setColor('black');
         }
       } else {
         // 스크롤 올릴 때
         if (scrollTop >= 0 && scrollTop < pageHeight) {
-          // console.log('현재 1페이지, up');
           setScrollIndex(1);
-          setColor('black');
         } else if (
           scrollTop >= pageHeight &&
           scrollTop < pageHeight * 2 + 480
         ) {
-          // console.log('현재 2페이지, up');
           setScrollIndex(2);
-          setColor('white');
         } else if (
           scrollTop >= pageHeight * 2 &&
           scrollTop < pageHeight * 3 + 480 * 2
         ) {
-          // console.log('현재 3페이지, up');
           setScrollIndex(3);
         } else if (
           scrollTop >= pageHeight * 3 &&
           scrollTop < pageHeight * 3 + 480 * 4 + workHeight
         ) {
-          // console.log('현재 4페이지, up');
           setScrollIndex(4);
-          setColor('white');
         } else {
-          // console.log('현재 5페이지, up');
           setScrollIndex(5);
-          setColor('black');
         }
       }
     };
@@ -104,21 +84,18 @@ const MainPage = (props) => {
         left: 0,
         behavior: 'smooth',
       });
-      setColor('black');
     } else if (setColorIndex === 5) {
       mainRef.current.scrollTo({
         top: (pageHeight + 480) * pageNum + workHeight,
         left: 0,
         behavior: 'smooth',
       });
-      setColor('black');
     } else {
       mainRef.current.scrollTo({
         top: (pageHeight + 480) * pageNum,
         left: 0,
         behavior: 'smooth',
       });
-      setColor('white');
     }
 
     setScrollIndex(setColorIndex);

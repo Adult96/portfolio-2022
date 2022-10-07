@@ -1,3 +1,11 @@
+/* @font-face {
+  font-family: 'BMHANNAPro';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.0/BMHANNAPro.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+} */
+
 .home {
   position: sticky;
   top: 0;
@@ -14,14 +22,15 @@
   font-size: 3rem;
   line-height: 0.9;
   /* background-color: rgb(0, 0, 0); */
-  background: #e7e5e4;
+  /* background: #e7e5e4; */
+  background-color: #2ac1bc;
 }
 
 .bulb {
   font-size: 5rem;
   -webkit-background-clip: text;
   color: #e7e5e4;
-  filter: drop-shadow(0 0 2px #000000);
+  filter: drop-shadow(0 0 0px #000000);
   animation: flash 2s linear alternate infinite;
   margin-bottom: 1rem;
   transition: transform 300ms ease;
@@ -69,7 +78,7 @@
 } */
 
 .language:not(.light) {
-  opacity: 0.4;
+  /* opacity: 0.4; */
   animation: flashTitle 2s linear alternate infinite;
 }
 
@@ -84,14 +93,18 @@
 
 @keyframes flash {
   to {
-    filter: drop-shadow(0 0 14px #000000);
+    filter: drop-shadow(0 0 16px #000000);
   }
 }
 
 @keyframes flashTitle {
-  to {
-    opacity: 1;
-    text-shadow: 0px 12px 1rem black;
+  0% {
+    /* opacity: 1; */
+    text-shadow: 0px 1px 1px black;
+  }
+  100% {
+    /* opacity: 1; */
+    text-shadow: 0px 16px 1rem black;
   }
 }
 

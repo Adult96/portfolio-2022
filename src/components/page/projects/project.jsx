@@ -3,7 +3,7 @@ import styles from './project.module.css';
 
 const Project = ({ project }) => (
   <div className={styles.page}>
-    <p className={styles.num}>{project.num}</p>
+    {/* <p className={styles.num}>{project.num}</p> */}
     <div className={styles.contents}>
       <a href={project.link} target='blank'>
         <img

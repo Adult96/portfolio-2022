@@ -65,8 +65,16 @@
 @media screen and (max-width: 480px) {
   .contact {
     font-size: 1.8rem;
+    flex-direction: row;
+    margin: 0;
+    bottom: 0;
   }
 
+  .instagram,
+  .github,
+  .email {
+    margin-right: 1rem;
+  }
   .button {
     width: 1.8rem;
     height: 1.8rem;

@@ -2,7 +2,8 @@
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: #e7e5e4;
+  /* background-color: #e7e5e4; */
+  background-color: #1d8581;
 }
 
 .content {
@@ -33,7 +34,7 @@
   width: 100%;
   height: 100vh;
   background-color: transparent;
-  color: black;
+  color: white;
   transform: rotate(90deg);
   position: relative;
   transform-origin: top left;
@@ -58,7 +59,7 @@
   height: 5rem;
   font-size: 4rem;
   color: transparent;
-  -webkit-text-stroke: 2px #000000;
+  -webkit-text-stroke: 2px white;
   -webkit-background-clip: text;
   transform: rotate(-90deg);
   font-family: 'Black Han Sans', sans-serif;
@@ -70,24 +71,69 @@
   height: 5rem;
   font-size: 4rem;
   color: transparent;
-  -webkit-text-stroke: 2px #000000;
+  -webkit-text-stroke: 2px white;
   -webkit-background-clip: text;
   transform: rotate(-90deg);
   font-family: 'Black Han Sans', sans-serif;
 }
 
 @media screen and (max-width: 480px) {
+  .projects {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+  }
   .title {
+    position: absolute;
+    left: 0;
     font-size: 3rem;
-    margin-left: 1rem;
+    margin: 0;
+    margin-top: 4rem;
+  }
+
+  .content {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transform: rotate(0deg);
+    position: relative;
+    transform-origin: top left;
+    top: 0;
+    left: 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transform: rotate(0deg);
+    top: 0px;
+    left: 0%;
   }
 
   .textStart {
+    position: absolute;
+    top: 0;
+    margin-top: 10rem;
     margin-left: 0rem;
     font-size: 3rem;
+    transform: rotate(0deg);
+    text-align: center;
   }
 
   .textEnd {
+    margin-top: 5rem;
+    margin-left: 0rem;
     font-size: 3rem;
+    transform: rotate(0deg);
+    text-align: center;
+  }
+
+  .content {
+    overflow-x: scroll;
   }
 }
