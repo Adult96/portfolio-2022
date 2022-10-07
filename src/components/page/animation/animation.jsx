@@ -17,40 +17,58 @@ const Animation = ({ SetWorkHeight }) => {
       <p className={styles.title}>Animation</p>
       <div className={styles.content}>
         <div className={styles.cardHover}>
-          <video
+          <a
             className={styles.cardVideo}
-            src='video/cardHover.mp4'
-            autoPlay
-            loop
-            muted
-            playsInline
-          ></video>
+            href='https://adult96.github.io/card-hover/'
+            target='blank'
+          >
+            <video
+              className={styles.video}
+              src='video/cardHover.mp4'
+              autoPlay
+              loop
+              muted
+              playsInline
+            ></video>
+          </a>
           <div className={styles.infoCard}>
             CSS translate3d 를 이용한 <br /> 3D Card 효과 입니다.
           </div>
         </div>
         <div className={styles.clickEffect}>
-          <video
+          <a
             className={styles.clickVideo}
-            src='video/clickEffect.mp4'
-            autoPlay
-            loop
-            muted
-            playsInline
-          ></video>
+            href='https://adult96.github.io/ripple-effect/'
+            target='blank'
+          >
+            <video
+              className={styles.video}
+              src='video/clickEffect.mp4'
+              autoPlay
+              loop
+              muted
+              playsInline
+            ></video>
+          </a>
           <div className={styles.infoClick}>
             클릭 위치에 따라 Effect의 <br /> 위치가 달라지는 효과 입니다.
           </div>
         </div>
         <div className={styles.mouseHover}>
-          <video
+          <a
             className={styles.mouseVideo}
-            src='video/mouseHover.mp4'
-            autoPlay
-            loop
-            muted
-            playsInline
-          ></video>
+            href='https://adult96.github.io/mouse-hover/'
+            target='blank'
+          >
+            <video
+              className={styles.video}
+              src='video/mouseHover.mp4'
+              autoPlay
+              loop
+              muted
+              playsInline
+            ></video>
+          </a>
           <div className={styles.infoMouse}>
             글자의 방향에 따라 달라지는 <br /> Light효과 입니다.
           </div>

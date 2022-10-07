@@ -25,6 +25,21 @@
   margin: 10rem 0;
 }
 
+.a {
+  opacity: 1;
+}
+
+.mouseVideo,
+.clickVideo,
+.cardVideo {
+  transition: all 300ms ease-in;
+}
+
+.video {
+  width: 30rem;
+  height: 30rem;
+}
+
 .mouseHover,
 .clickEffect,
 .cardHover {
@@ -47,14 +62,6 @@
 .mouseVideo:hover ~ .infoMouse {
   opacity: 1;
   transform: translateX(0rem);
-}
-
-.mouseVideo,
-.clickVideo,
-.cardVideo {
-  width: 30rem;
-  height: 30rem;
-  transition: all 300ms ease-in;
 }
 
 .infoCard,
