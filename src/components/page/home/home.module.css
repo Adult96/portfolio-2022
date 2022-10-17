@@ -59,11 +59,14 @@
 }
 
 .name {
+  font-family: 'Do Hyeon', sans-serif;
   font-size: 10vw;
   margin: 5vh 0;
 }
 
 .portfolio {
+  font-family: 'Do Hyeon', sans-serif;
+
   font-size: 8vw;
   margin: 5vh 0;
 }

@@ -8,7 +8,7 @@ import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 const Typing = () => {
   const [Text, setText] = useState('');
   const [Count, setCount] = useState(0);
-  const [text] = useState('Hello,(_____)!');
+  const [text] = useState('Hello,_____!');
 
   useEffect(() => {
     const interval = setInterval(() => {
